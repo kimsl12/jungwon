@@ -1,0 +1,8 @@
+# 자동 생성 — 불필요한 파일 제외
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*~
+.idea/
+.vscode/
