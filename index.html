@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>투자 인텔리전스 브리핑</title>
+<style>
+  :root { --bg:#0f1117; --card:#1a1d28; --accent:#4f8cff; --text:#e2e8f0; --dim:#94a3b8; --border:#2d3348; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard',-apple-system,sans-serif; background:var(--bg); color:var(--text); font-size:18px; line-height:1.8; }
+  .wrap { max-width:600px; margin:0 auto; padding:40px 20px; }
+  h1 { font-size:24px; font-weight:800; text-align:center; margin-bottom:8px;
+    background:linear-gradient(135deg,#fff 30%,var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .sub { text-align:center; color:var(--dim); font-size:14px; margin-bottom:32px; }
+  .list { list-style:none; }
+  .list li { margin-bottom:10px; }
+  .list a {
+    display:block; background:var(--card); border:1px solid var(--border);
+    border-radius:12px; padding:16px 20px; color:var(--text);
+    text-decoration:none; font-size:16px; font-weight:600;
+    transition:background 0.2s, border-color 0.2s;
+    min-height:48px;
+  }
+  .list a:hover, .list a:active { background:#22263a; border-color:var(--accent); }
+  .list .date { font-size:13px; color:var(--dim); margin-top:4px; }
+  .footer { margin-top:40px; text-align:center; font-size:12px; color:var(--dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>투자 인텔리전스 브리핑</h1>
+  <p class="sub">최신 리포트 목록</p>
+  <ul class="list" id="reportList"></ul>
+  <div class="footer">자동 업데이트됩니다</div>
+</div>
+<script>
+// GitHub API로 reports 폴더의 파일 목록을 가져와서 표시
+(async function(){
+  const list = document.getElementById('reportList');
+  try {
+    const res = await fetch('https://api.github.com/repos/kimsl12/jungwon/contents/reports');
+    if(!res.ok) throw new Error('API error');
+    const files = await res.json();
+    const htmlFiles = files
+      .filter(f => f.name.endsWith('.html') && !f.name.includes('test') && !f.name.includes('polling'))
+      .sort((a,b) => b.name.localeCompare(a.name));
+
+    if(htmlFiles.length === 0){
+      list.innerHTML = '<li style="color:var(--dim);text-align:center;">리포트가 아직 없습니다</li>';
+      return;
+    }
+
+    htmlFiles.forEach(f => {
+      const li = document.createElement('li');
+      const name = decodeURIComponent(f.name).replace('.html','').replace(/_/g,' ');
+      const url = `reports/${encodeURIComponent(f.name)}`;
+      li.innerHTML = `<a href="${url}">${name}</a>`;
+      list.appendChild(li);
+    });
+  } catch(e) {
+    // API 실패 시 정적 링크 표시
+    const reports = [
+      {name:'2026_04_05_글로벌 이슈.html', label:'2026 04 05 글로벌 이슈'},
+      {name:'2026_04_05_아침 브리핑.html', label:'2026 04 05 아침 브리핑'},
+      {name:'2026_04_04_저녁 브리핑.html', label:'2026 04 04 저녁 브리핑'},
+      {name:'2026_04_03_저녁 브리핑.html', label:'2026 04 03 저녁 브리핑'},
+      {name:'2026_04_03_아침브리핑.html', label:'2026 04 03 아침 브리핑'},
+    ];
+    reports.forEach(r => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="reports/${encodeURIComponent(r.name)}">${r.label}</a>`;
+      list.appendChild(li);
+    });
+  }
+})();
+</script>
+</body>
+</html>
