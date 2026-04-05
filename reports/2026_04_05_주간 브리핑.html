@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주간 투자 인텔리전스 브리핑 | 2026년 4월 5일</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #fafaf5;
+  color: #1a202c;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.9;
+  padding: 16px;
+  max-width: 100%;
+  margin: 0 auto;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+@media (min-width: 768px) {
+  body { max-width: 720px; padding: 24px; }
+}
+
+.report-header {
+  text-align: center;
+  padding: 16px 0 8px 0;
+  border-bottom: 2px solid #e2dfd7;
+  margin-bottom: 24px;
+}
+.report-header h1 { font-size: 1.4em; color: #0f172a; margin-bottom: 4px; }
+.report-header .date { font-size: 0.95em; color: #6b7280; }
+
+/* ═══ 오늘의 한 줄 ═══ */
+.one-liner {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 20px 24px;
+  border-radius: 12px;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ═══ 영향 카드 ═══ */
+.impact-card {
+  background: #fff;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0 24px 0;
+}
+.impact-card h3 { color: #2563eb; margin-top: 0; border-bottom: none; font-size: 1.1em; }
+.impact-item { padding: 12px 0; border-bottom: 1px solid #e8e4dc; font-size: 1em; line-height: 1.8; }
+.impact-item:last-child { border-bottom: none; }
+
+/* ═══ 테이블 ═══ */
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th { background: #f0ede6; padding: 12px 14px; text-align: left; font-weight: 700; color: #1e293b; border-bottom: 2px solid #d4cfc4; position: sticky; top: 0; white-space: nowrap; font-size: 0.95em; }
+td { padding: 12px 14px; border-bottom: 1px solid #e8e4dc; word-break: keep-all; font-size: 0.95em; }
+tr:hover { background: #f5f3ed; }
+
+@media (max-width: 600px) {
+  .card-table thead { display: none; }
+  .card-table tr { display: block; background: #fff; border: 1px solid #e8e4dc; border-radius: 10px; padding: 14px; margin: 10px 0; }
+  .card-table td { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0ede6; }
+  .card-table td::before { content: attr(data-label); font-weight: 700; color: #4a5568; margin-right: 12px; flex-shrink: 0; }
+  .card-table td:last-child { border-bottom: none; }
+}
+
+/* ═══ 색상 체계 ═══ */
+.up      { color: #15803d; font-weight: 700; }
+.down    { color: #b91c1c; font-weight: 700; }
+.neutral { color: #6b7280; }
+.highlight { color: #1d4ed8; font-weight: 700; }
+.warning { color: #b45309; font-weight: 700; }
+.bg-up      { background: rgba(21,128,61,0.1); }
+.bg-down    { background: rgba(185,28,28,0.1); }
+.bg-warning { background: rgba(180,83,9,0.1); }
+.bg-highlight { background: rgba(29,78,216,0.08); }
+
+/* ═══ 헤더 ═══ */
+h2, h3 { color: #0f172a; border-bottom: 2px solid #e2dfd7; padding-bottom: 8px; }
+h2 { font-size: 1.3em; margin-top: 36px; }
+h3 { font-size: 1.1em; margin-top: 24px; }
+code { background: #f0ede6; padding: 4px 10px; border-radius: 6px; font-size: 0.9em; color: #b45309; white-space: nowrap; }
+
+/* ═══ 접이식 ═══ */
+details { border: 1px solid #e2dfd7; border-radius: 10px; padding: 0; margin: 10px 0; background: #fff; }
+summary { cursor: pointer; font-weight: 700; color: #1e293b; padding: 16px 20px; font-size: 1em; list-style: none; display: flex; align-items: center; gap: 8px; min-height: 48px; }
+summary::before { content: '▶'; font-size: 0.7em; transition: transform 0.2s; flex-shrink: 0; color: #6b7280; }
+details[open] summary::before { transform: rotate(90deg); }
+summary::-webkit-details-marker { display: none; }
+details > div, details > table, details > section { padding: 0 20px 16px 20px; }
+
+details.accent { border-left: 4px solid #2563eb; background: #f8faff; }
+details.accent summary { color: #1d4ed8; }
+details.accent summary::before { color: #2563eb; }
+
+/* ═══ 팁 박스 ═══ */
+.tip-box { background: #fef9ec; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 12px 0; font-size: 0.95em; color: #78350f; line-height: 1.8; }
+
+/* ═══ 탭 UI ═══ */
+.tab-container { margin: 16px 0; }
+.tab-buttons { display: flex; gap: 4px; border-bottom: 2px solid #e2dfd7; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tab-btn { padding: 12px 18px; border: 1px solid #e2dfd7; border-bottom: none; border-radius: 10px 10px 0 0; background: #f5f3ed; cursor: pointer; font-weight: 700; color: #4a5568; font-size: 0.95em; white-space: nowrap; min-height: 48px; }
+.tab-btn.active { background: #fafaf5; color: #1d4ed8; border-bottom: 2px solid #fafaf5; margin-bottom: -2px; }
+.tab-content { display: none; padding: 16px 0; }
+.tab-content.active { display: block; }
+
+/* ═══ 포트폴리오 판정 뱃지 ═══ */
+.portfolio-verdict { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 0.85em; font-weight: 700; margin-left: 8px; }
+.verdict-hold { background: #f0ede6; color: #6b7280; }
+.verdict-adjust { background: #dbeafe; color: #1d4ed8; }
+.verdict-alert { background: #fef3c7; color: #b45309; }
+
+/* ═══ 차트 ═══ */
+.chart-container { margin: 20px 0; padding: 16px; background: #fff; border: 1px solid #e8e4dc; border-radius: 12px; }
+.chart-title { font-size: 1em; font-weight: 700; color: #1e293b; margin-bottom: 12px; }
+
+.bar-chart { width: 100%; }
+.bar-row { display: flex; align-items: center; margin: 8px 0; }
+.bar-label { width: 100px; font-size: 0.9em; color: #1e293b; text-align: right; padding-right: 10px; white-space: nowrap; flex-shrink: 0; font-weight: 600; }
+.bar-track { flex: 1; background: #f0ede6; border-radius: 6px; height: 28px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 8px; font-size: 0.8em; font-weight: 700; color: white; white-space: nowrap; }
+
+.vbar-chart { display: flex; align-items: flex-end; justify-content: space-around; height: 200px; border-bottom: 2px solid #e2dfd7; padding: 0 10px; margin-bottom: 8px; }
+.vbar-item { display: flex; flex-direction: column; align-items: center; flex: 1; max-width: 80px; }
+.vbar-bar { width: 40px; border-radius: 6px 6px 0 0; }
+.vbar-val { font-size: 0.85em; font-weight: 700; margin-bottom: 4px; }
+.vbar-label { font-size: 0.8em; color: #1e293b; margin-top: 6px; text-align: center; font-weight: 600; }
+
+.line-chart-svg { width: 100%; height: auto; }
+.line-chart-svg text { font-size: 11px; fill: #4a5568; font-weight: 600; }
+.chart-line { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.chart-dot { r: 5; }
+.chart-area { opacity: 0.15; }
+.chart-grid { stroke: #e8e4dc; stroke-width: 1; }
+
+.signal-bar-track { width: 100%; background: #e8e4dc; border-radius: 6px; height: 10px; margin: 4px 0; }
+
+/* ═══ 자산군 고정 색상 ═══ */
+.c-stock-us  { background: #3b82f6; }
+.c-stock-kr  { background: #6366f1; }
+.c-bond      { background: #16a34a; }
+.c-dividend  { background: #f97316; }
+.c-gold      { background: #eab308; }
+.c-dollar    { background: #06b6d4; }
+.c-reit      { background: #8b5cf6; }
+.c-crypto    { background: #ec4899; }
+.c-theme     { background: #14b8a6; }
+.c-emerging  { background: #f43f5e; }
+.c-cash      { background: #9ca3af; }
+.c-commodity { background: #a16207; }
+.c-covered   { background: #7c3aed; }
+
+.disclaimer { border-top: 2px solid #d0d5dd; padding-top: 20px; margin-top: 32px; color: #4a5568; font-size: 0.9em; line-height: 1.8; }
+
+/* 4종 비교 테이블 */
+.compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92em; }
+.compare-table th { background: #f0ede6; padding: 10px 12px; text-align: center; font-weight: 700; border-bottom: 2px solid #d4cfc4; }
+.compare-table td { padding: 10px 12px; text-align: center; border-bottom: 1px solid #e8e4dc; }
+.compare-table td:first-child { text-align: left; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <h1>📊 주간 종합 리포트</h1>
+  <div class="date">2026년 3월 30일 ~ 4월 4일 | MODULE C</div>
+</div>
+
+<!-- ═══ C-0. 이번 주의 한 줄 ═══ -->
+<div class="one-liner">
+  이란 전쟁 속 미국 증시는 4주 만에 반등했지만,<br>
+  다음 주 CPI 쇼크가 예고돼 있어 "환호 후 긴장" 구간입니다.
+</div>
+
+<!-- ═══ C-1. 나에게 미치는 영향 ═══ -->
+<div class="impact-card">
+  <h3>🎯 나에게 미치는 영향 — 이번 주 결론 & 다음 주 행동</h3>
+
+  <div class="impact-item">
+    ✅ <strong>이번 주 결론:</strong> S&P 500이 +3.4% 반등하며 6주 만의 첫 주간 상승을 기록했습니다. 하지만 유가 $110 돌파, VIX 23대 유지, 원화 약세(1,511원)가 동시에 진행 중이라 "안도 랠리"일 뿐 추세 전환은 아직 아닙니다.
+  </div>
+
+  <div class="impact-item">
+    📋 <strong>다음 주 할 일:</strong> 4/10(금) CPI 발표 전까지 신규 매수는 자제하세요. 3월 CPI가 3.3%(전년비) 예상으로, 발표 후 시장이 크게 흔들릴 수 있습니다. 현금 비중을 평소보다 5~10%p 높여두는 게 안전합니다.
+  </div>
+
+  <div class="impact-item">
+    👀 <strong>다음 주 핵심 이벤트:</strong> ① 4/8(수) FOMC 의사록 공개 — 연준의 유가 대응 힌트 확인. ② 4/10(금) 3월 CPI — 휘발유 급등 반영 첫 지표, 0.9%(월간) 예상으로 2022년 5월 이후 최고치.
+  </div>
+
+  <div class="impact-item">
+    🚫 <strong>무시해도 될 것:</strong> SpaceX IPO 2조 달러 밸류에이션 뉴스 — 아직 상장 시점이 미정이고, 실질 투자 가능 시점이 아닙니다.
+  </div>
+</div>
+
+<!-- ═══ C-2. 접이식 상세 ═══ -->
+
+<!-- 📈 주간 시장 수치 -->
+<details class="accent">
+  <summary>📈 주간 시장 수치 — 자세히 보기 (8개 지수)</summary>
+  <div>
+    <table class="card-table">
+      <thead>
+        <tr><th>지수</th><th>종가</th><th>주간 등락</th><th>판정</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="지수">S&P 500</td>
+          <td data-label="종가">6,583</td>
+          <td data-label="주간 등락" class="up">+3.4%</td>
+          <td data-label="판정">📈 6주 만의 첫 주간 상승</td>
+        </tr>
+        <tr>
+          <td data-label="지수">NASDAQ</td>
+          <td data-label="종가">21,879</td>
+          <td data-label="주간 등락" class="up">+4.4%</td>
+          <td data-label="판정">📈 기술주 주도 반등</td>
+        </tr>
+        <tr>
+          <td data-label="지수">DOW</td>
+          <td data-label="종가">46,505</td>
+          <td data-label="주간 등락" class="up">+3.0%</td>
+          <td data-label="판정">📈 산업·금융 동반 상승</td>
+        </tr>
+        <tr class="bg-warning">
+          <td data-label="지수">VIX (공포지수)</td>
+          <td data-label="종가">23.87</td>
+          <td data-label="주간 등락" class="down">하락</td>
+          <td data-label="판정" class="warning">⚠️ 여전히 20 위 — 긴장 유지</td>
+        </tr>
+        <tr>
+          <td data-label="지수">달러/원</td>
+          <td data-label="종가">1,511원</td>
+          <td data-label="주간 등락" class="down">+0.06%</td>
+          <td data-label="판정" class="warning">⚠️ 2009년 이후 최약</td>
+        </tr>
+        <tr>
+          <td data-label="지수">금(Gold)</td>
+          <td data-label="종가">$4,677/oz</td>
+          <td data-label="주간 등락" class="up">상승 지속</td>
+          <td data-label="판정">📈 안전자산 수요 폭발</td>
+        </tr>
+        <tr>
+          <td data-label="지수">KOSPI</td>
+          <td data-label="종가">5,377</td>
+          <td data-label="주간 등락" class="neutral">혼조 (변동성 극대)</td>
+          <td data-label="판정" class="warning">⚠️ 서킷브레이커 발동 주</td>
+        </tr>
+        <tr>
+          <td data-label="지수">KOSDAQ</td>
+          <td data-label="종가">1,116</td>
+          <td data-label="주간 등락" class="neutral">혼조</td>
+          <td data-label="판정" class="warning">⚠️ 사이드카 발동</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 주간 등락 수직 바 차트 -->
+    <div class="chart-container">
+      <div class="chart-title">주요 지수 주간 등락률 (%)</div>
+      <div class="vbar-chart">
+        <div class="vbar-item">
+          <div class="vbar-val up">+3.4%</div>
+          <div class="vbar-bar" style="height: 77%; background: #3b82f6;"></div>
+          <div class="vbar-label">S&P</div>
+        </div>
+        <div class="vbar-item">
+          <div class="vbar-val up">+4.4%</div>
+          <div class="vbar-bar" style="height: 100%; background: #6366f1;"></div>
+          <div class="vbar-label">NASDAQ</div>
+        </div>
+        <div class="vbar-item">
+          <div class="vbar-val up">+3.0%</div>
+          <div class="vbar-bar" style="height: 68%; background: #14b8a6;"></div>
+          <div class="vbar-label">DOW</div>
+        </div>
+        <div class="vbar-item">
+          <div class="vbar-val neutral">혼조</div>
+          <div class="vbar-bar" style="height: 20%; background: #6366f1;"></div>
+          <div class="vbar-label">KOSPI</div>
+        </div>
+        <div class="vbar-item">
+          <div class="vbar-val neutral">혼조</div>
+          <div class="vbar-bar" style="height: 15%; background: #8b5cf6;"></div>
+          <div class="vbar-label">KOSDAQ</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:0.9em; color:#6b7280; margin-top:8px;">
+      [Yahoo Finance] [Investing.com] [Trading Economics] 기준 4/3~4/4 종가
+    </p>
+  </div>
+</details>
+
+<!-- 📝 이번 주 시장 총평 -->
+<details class="accent">
+  <summary>📝 이번 주 시장 총평 — 자세히 보기</summary>
+  <div>
+    <p style="margin-bottom:16px;">
+      이번 주 미국 증시는 <strong>이란 전쟁 개전 이후 첫 주간 상승</strong>을 기록했습니다. S&P 500이 +3.4%, 나스닥이 +4.4% 오르며 4개월 만에 최고의 한 주를 보냈어요. 화요일에는 S&P 500이 지난 5월 이후 가장 큰 일간 상승률을 기록하기도 했습니다. [Advisor Perspectives]
+    </p>
+
+    <p style="margin-bottom:16px;">
+      <strong>반등의 핵심 동력은 "휴전 기대감"이었습니다.</strong> 트럼프 대통령이 "이란 전쟁이 몇 주 안에 끝날 수 있다"고 언급하면서, 4/1(화) KOSPI가 하루에 +8.44% 폭등하고 미국 시장도 이에 호응했어요. 하지만 이란은 즉각 "미국에 휴전을 요청한 적 없다"고 부인했고, 파키스탄 중재 노력도 교착 상태에 빠지며 금요일에는 기대감이 상당 부분 식었습니다. [CNBC] [Al Jazeera] [Reuters]
+    </p>
+
+    <p style="margin-bottom:16px;">
+      <strong>유가는 여전히 핵심 리스크입니다.</strong> WTI 원유가 $110 근처에서 거래되고 있는데, 호르무즈 해협 통과 선박이 <strong>90~95% 감소</strong>한 상태가 이어지고 있기 때문입니다. 세계 석유 물동량의 20%가 여기를 지나는데, 사실상 봉쇄된 것이나 다름없어요. 유가가 $150까지 오를 확률이 21%(Polymarket 기준)로 무시하기 어려운 수준입니다. [CNBC] [Invezz]
+    </p>
+
+    <p style="margin-bottom:16px;">
+      <strong>한국 시장은 극단적 변동성 구간에 있습니다.</strong> KOSPI가 하루에 +8.44% 올랐다가 다음 날 -4.47% 빠지는 등, 3월 이후 서킷브레이커가 3회 발동되었습니다. 이는 코로나 팬데믹 이후 처음입니다. 원/달러 환율은 2009년 이후 최약 수준인 1,511원을 기록 중이고, 외국인 투자자가 12일 연속 매도했다가 금요일에야 순매수로 전환했습니다. [Korea Herald] [Seoul Economic Daily]
+    </p>
+
+    <p style="margin-bottom:16px;">
+      <strong>한 마디로:</strong> "전쟁 피로감 속 반등"이지, "위험 해소 후 반등"이 아닙니다. 유가·환율·지정학 3중 리스크가 그대로인 만큼, 다음 주 CPI가 시장의 다음 방향을 결정할 겁니다.
+    </p>
+
+    <h3 style="border:none; margin-top:24px;">ETF 자금 흐름 (3월 4주차 기준)</h3>
+    <table>
+      <thead>
+        <tr><th>구분</th><th>순유입(출)</th><th>해석</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>미국 주식 ETF</td>
+          <td class="up">+$237억</td>
+          <td>"바닥 매수" 자금 유입</td>
+        </tr>
+        <tr>
+          <td>해외 주식 ETF</td>
+          <td class="down">-$12.4억</td>
+          <td>신흥국 회피 지속</td>
+        </tr>
+        <tr>
+          <td>채권 ETF</td>
+          <td class="up">+$78.7억</td>
+          <td>안전자산 수요 유지</td>
+        </tr>
+        <tr>
+          <td>원자재 ETF</td>
+          <td class="down">-$24.5억</td>
+          <td>유가 차익실현 흐름</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.9em; color:#6b7280;">[ICI] 3/25 주간 기준</p>
+  </div>
+</details>
+
+<!-- 🏦 경제 환경 심층 -->
+<details class="accent">
+  <summary>🏦 경제 환경 심층 — 자세히 보기</summary>
+  <div>
+    <h3 style="border:none;">금리 — 연준, "기다리는 게 답"</h3>
+    <p style="margin-bottom:16px;">
+      연준은 기준금리를 <strong>3.50~3.75%</strong>로 동결 중입니다(2회 연속 동결). 유가가 3월에만 40% 넘게 오르면서, 성급하게 금리를 내렸다간 물가가 더 뛸 수 있다는 판단이에요. PCE 물가 전망을 2.4% → 2.7%로 올려 잡았고, 2026년 중 금리 인하는 "많아야 1회"라는 게 시장의 합의입니다. [U.S. Bank] [iShares]
+    </p>
+    <p style="margin-bottom:16px;">
+      <strong>중요한 변화:</strong> 트럼프 대통령이 1월에 케빈 워시(Kevin Warsh)를 차기 연준 의장으로 지명했습니다. 파월 의장 임기가 5월에 만료되면 교체될 예정이에요. 워시가 취임하면 금리 인하에 더 적극적일 거라는 기대가 시장에 깔려 있습니다. [Morningstar]
+    </p>
+
+    <h3 style="border:none;">물가 — "유가발 인플레 쓰나미" 대기 중</h3>
+    <p style="margin-bottom:16px;">
+      다음 주 금요일(4/10) 발표될 3월 CPI가 <strong>월간 +0.9%, 전년비 3.3%</strong>로 예상됩니다. 이게 맞다면 2022년 5월 이후 가장 높은 수치예요. 휘발유 가격 급등이 주범입니다. 트럼프 관세의 영향도 4~10월에 본격적으로 소비자 가격에 전가될 것으로 JP모건은 보고 있습니다. [Kiplinger] [CNBC]
+    </p>
+
+    <h3 style="border:none;">고용 — 아직은 "버틸 만한" 수준</h3>
+    <p style="margin-bottom:16px;">
+      3월 고용이 반등하며 실업률이 소폭 하락했습니다. 하지만 관세 발효 이후 제조업 일자리가 10개월 중 9개월 감소해, 누적 8만9천 개를 잃었다는 점은 걱정입니다. "좋은 뉴스 같지만 속을 들여다보면 흔들리고 있다"는 해석이 우세합니다. [Schwab] [Tax Foundation]
+    </p>
+
+    <h3 style="border:none;">관세 — 1년이 지나도 끝나지 않은 여파</h3>
+    <p style="margin-bottom:16px;">
+      현재 실효관세율은 약 11%입니다. 2025년 4월 '해방의 날' 관세 1주년이 지났지만, 소매·자동차·제약 업종이 여전히 공급망 재편에 시달리고 있어요. 가구당 연간 약 $1,230의 추가 부담이 발생하고 있다는 TPC의 추산도 있습니다. [Tax Foundation] [JP Morgan] [Axios]
+    </p>
+  </div>
+</details>
+
+<!-- 🌍 지정학·기술·에너지 -->
+<details class="accent">
+  <summary>🌍 지정학 · 기술 · 에너지 — 자세히 보기</summary>
+  <div>
+    <h3 style="border:none;">🔴 지정학 — 이란 전쟁 34일차, 교착 심화</h3>
+    <p style="margin-bottom:16px;">
+      미국-이스라엘 대 이란 전쟁이 34일째입니다. 핵심 쟁점은 호르무즈 해협 개방인데, 미국은 "해협 먼저 열어라"를, 이란은 "전쟁 영구 종결 보장을 먼저 달라"를 요구하며 평행선을 긋고 있습니다. 파키스탄의 중재도 사실상 무산됐습니다. [CNBC] [Al Jazeera] [NPR]
+    </p>
+    <p style="margin-bottom:16px;">
+      <strong>투자 관점:</strong> 호르무즈 해협 봉쇄가 길어질수록 유가는 $120~150 사이에서 움직일 가능성이 높고, 이는 글로벌 인플레이션 재점화의 가장 큰 위험요인입니다. 확신도: <strong>높음(80%)</strong>.
+    </p>
+
+    <h3 style="border:none;">🟡 기술 — 테슬라 실적 부진, SpaceX IPO 기대</h3>
+    <p style="margin-bottom:16px;">
+      테슬라가 1분기 인도량 35.8만 대를 기록해 컨센서스(36.5~37.2만 대)를 밑돌았습니다. 전분기 대비 -14%로, 주가가 -5% 넘게 하락했어요. 반면 SpaceX는 2조 달러 밸류에이션으로 역대 최대 IPO를 준비 중입니다(올해 하반기 예상). [TheStreet] [CNBC]
+    </p>
+
+    <h3 style="border:none;">🟠 에너지 — 유가 $110, "뉴 노멀" 가능성</h3>
+    <p style="margin-bottom:16px;">
+      WTI 원유가 $110 내외에서 거래 중이며, 브렌트유는 1월 $76 → 3월 말 $115까지 +51% 폭등했습니다. Kalshi 베팅 시장에서는 4월 중 $120 도달 확률을 76%로 보고 있어요. 이란-오만 간 에너지 협정 서명도 있었지만, 실질적 공급 개선으로 이어지진 않았습니다. [IEA] [CNBC] [FX Leaders]
+    </p>
+  </div>
+</details>
+
+<!-- 🧑‍💼 큰손 동향 & 거물 투자자 -->
+<details class="accent">
+  <summary>🧑‍💼 큰손 동향 & 거물 투자자 — 자세히 보기</summary>
+  <div>
+    <table class="card-table">
+      <thead>
+        <tr><th>투자자</th><th>최근 동향</th><th>투자 시사점</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="투자자"><strong>워런 버핏</strong><br><span style="font-size:0.85em;color:#6b7280;">Berkshire Hathaway</span></td>
+          <td data-label="최근 동향">12분기 연속 순매도. 2025년 $1,840억 포지션 정리. 애플·뱅크오브아메리카·아마존 축소.</td>
+          <td data-label="투자 시사점" class="warning">"현금이 왕" — 사상 최대 현금 보유 중. 시장을 비싸다고 판단하는 신호.</td>
+        </tr>
+        <tr>
+          <td data-label="투자자"><strong>레이 달리오</strong><br><span style="font-size:0.85em;color:#6b7280;">Bridgewater 창립자</span></td>
+          <td data-label="최근 동향">2026년 최대 위험은 "유동성 위기"로 진단. 포트폴리오의 5~15%를 금에 배분할 것을 권고.</td>
+          <td data-label="투자 시사점" class="highlight">금 비중 확대 조언 — 현재 금 가격($4,677)이 이 시각을 반영 중.</td>
+        </tr>
+        <tr>
+          <td data-label="투자자"><strong>캐시 우드</strong><br><span style="font-size:0.85em;color:#6b7280;">ARK Invest</span></td>
+          <td data-label="최근 동향">테슬라(TSLA) 최대 비중 유지. 아마존 일부 축소. 혁신 기술 집중 전략 유지.</td>
+          <td data-label="투자 시사점">테슬라 실적 부진에도 장기 비전 유지 — 역발상 신호이나 리스크도 큼.</td>
+        </tr>
+        <tr>
+          <td data-label="투자자"><strong>마이클 버리</strong><br><span style="font-size:0.85em;color:#6b7280;">Scion Asset Management</span></td>
+          <td data-label="최근 동향">펀드 폐쇄 보도. 적극적 투자 활동에서 사실상 이탈.</td>
+          <td data-label="투자 시사점">"빅쇼트" 투자자의 퇴장 — 역발상 시그널 한 축이 빠진 상황.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      <strong>💡 대가들의 공통 메시지:</strong> 버핏과 달리오 모두 "현금·금" 비중 확대를 실행하고 있습니다. 시장이 단기 반등하더라도, 큰손들은 아직 "방어 모드"입니다. 거물 투자자의 매매는 참고 사항이며, 매수·매도 권유가 아닙니다. [Dataroma] [Gurufocus] [Insider Monkey]
+    </div>
+  </div>
+</details>
+
+<!-- 🔍 주목 종목·ETF -->
+<details class="accent">
+  <summary>🔍 주목 종목 · ETF — 자세히 보기</summary>
+  <div>
+    <h3 style="border:none;">📈 이번 주 주목할 만한 상승</h3>
+    <table>
+      <thead>
+        <tr><th>종목/ETF</th><th>이유</th><th>참고</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>XLE</strong> (에너지 셀렉트 ETF)</td>
+          <td>유가 $110 돌파에 에너지 섹터 수혜</td>
+          <td class="up">유가 연동 상승 지속</td>
+        </tr>
+        <tr>
+          <td><strong>GLD</strong> (금 ETF)</td>
+          <td>금 $4,677 — 사상 최고 경신 지속</td>
+          <td class="up">안전자산 선호 극대화</td>
+        </tr>
+        <tr>
+          <td><strong>방산주 (LMT, RTX)</strong></td>
+          <td>이란 전쟁 장기화 수혜</td>
+          <td class="up">지정학 프리미엄</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="border:none;">📉 이번 주 부진</h3>
+    <table>
+      <thead>
+        <tr><th>종목/ETF</th><th>이유</th><th>참고</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TSLA</strong> (테슬라)</td>
+          <td>Q1 인도량 컨센서스 하회, -14% QoQ</td>
+          <td class="down">-5% 이상 하락</td>
+        </tr>
+        <tr>
+          <td><strong>EEM</strong> (신흥국 ETF)</td>
+          <td>달러 강세 + 위험회피 심리</td>
+          <td class="down">자금 유출 지속</td>
+        </tr>
+        <tr>
+          <td><strong>항공·여행주</strong></td>
+          <td>유가 급등에 따른 비용 압박</td>
+          <td class="down">유가 민감 섹터</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.9em;color:#6b7280;">[Yahoo Finance] [Finviz] [Barchart]</p>
+  </div>
+</details>
+
+<!-- 📅 다음 주~한 달 일정 -->
+<details class="accent">
+  <summary>📅 다음 주 핵심 일정 — 자세히 보기</summary>
+  <div>
+    <table>
+      <thead>
+        <tr><th>날짜</th><th>이벤트</th><th>중요도</th></tr>
+      </thead>
+      <tbody>
+        <tr class="bg-warning">
+          <td>4/8 (수)</td>
+          <td>FOMC 의사록 공개</td>
+          <td class="warning">★★★</td>
+        </tr>
+        <tr>
+          <td>4/9 (목)</td>
+          <td>PCE 물가 지수</td>
+          <td class="highlight">★★★</td>
+        </tr>
+        <tr class="bg-warning">
+          <td>4/10 (금)</td>
+          <td><strong>3월 CPI 발표</strong> — 월간 +0.9% 예상 (2022.5 이후 최고)</td>
+          <td class="warning">★★★★★</td>
+        </tr>
+        <tr>
+          <td>5월 중</td>
+          <td>파월 연준 의장 임기 만료 → 워시 취임 예정</td>
+          <td class="highlight">★★★★</td>
+        </tr>
+        <tr>
+          <td>상시</td>
+          <td>이란-미국 휴전 협상 동향</td>
+          <td class="warning">★★★★★</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<!-- 🎯 투자 전략 제안 -->
+<details class="accent">
+  <summary>🎯 투자 전략 제안 — 자세히 보기</summary>
+  <div>
+    <p style="margin-bottom:16px;">
+      <strong>이번 주 판단: "전술적 방어 유지" (확신도 75%)</strong>
+    </p>
+    <p style="margin-bottom:16px;">
+      미국 증시가 반등했지만, 이는 전쟁 피로감 속 기술적 반등에 가깝습니다. 호르무즈 해협 봉쇄가 해소되지 않은 채 CPI 쇼크가 다가오고 있어, 다음 주 후반에 다시 변동성이 커질 수 있어요.
+    </p>
+
+    <h3 style="border:none;">시나리오별 대응</h3>
+    <table class="card-table">
+      <thead>
+        <tr><th>시나리오</th><th>확률</th><th>대응</th></tr>
+      </thead>
+      <tbody>
+        <tr class="bg-up">
+          <td data-label="시나리오">🟢 낙관: 이란 휴전 + CPI 예상 이하</td>
+          <td data-label="확률">15%</td>
+          <td data-label="대응">위험자산 비중 확대, 주식 +5~10%p</td>
+        </tr>
+        <tr>
+          <td data-label="시나리오">🟡 기본: 교착 지속 + CPI 예상 부합</td>
+          <td data-label="확률">55%</td>
+          <td data-label="대응">현재 비중 유지, 현금 확보</td>
+        </tr>
+        <tr class="bg-down">
+          <td data-label="시나리오">🔴 비관: 전쟁 확대 + CPI 쇼크</td>
+          <td data-label="확률">30%</td>
+          <td data-label="대응">방어 자산(금·채권·달러) 비중 확대</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.9em;color:#6b7280;margin-top:12px;">
+      시나리오 확률은 현재 시장 상황을 종합한 주관적 판단이며, 실제와 다를 수 있습니다.
+    </p>
+  </div>
+</details>
+
+<!-- ⚠️ 리스크 레이더 -->
+<details class="accent">
+  <summary>⚠️ 리스크 레이더 — 자세히 보기</summary>
+  <div>
+    <table class="card-table">
+      <thead>
+        <tr><th>리스크</th><th>심각도</th><th>전파 경로</th></tr>
+      </thead>
+      <tbody>
+        <tr class="bg-down">
+          <td data-label="리스크">🔴 이란 전쟁 확대 / 호르무즈 장기 봉쇄</td>
+          <td data-label="심각도" class="down">최상</td>
+          <td data-label="전파 경로">유가 $150 → 인플레 재점화 → 금리 인하 불가 → 주식·크립토 동반 하락</td>
+        </tr>
+        <tr class="bg-warning">
+          <td data-label="리스크">🟠 CPI 쇼크 (3.3%+ 전년비)</td>
+          <td data-label="심각도" class="warning">높음</td>
+          <td data-label="전파 경로">연준 인하 기대 소멸 → 채권 금리 상승 → 성장주 밸류에이션 압박</td>
+        </tr>
+        <tr class="bg-warning">
+          <td data-label="리스크">🟠 원화 약세 (1,520원+ 돌파 시)</td>
+          <td data-label="심각도" class="warning">높음</td>
+          <td data-label="전파 경로">해외 투자 환차손 → 외국인 한국 주식 매도 가속 → KOSPI 추가 하락</td>
+        </tr>
+        <tr>
+          <td data-label="리스크">🟡 관세 후속 효과 (4~10월 소비자 전가)</td>
+          <td data-label="심각도" class="neutral">중간</td>
+          <td data-label="전파 경로">소비 둔화 → 기업 실적 하향 → 주가 조정</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<!-- ═══ C-3. 주간 모델 포트폴리오 ═══ -->
+<h2>🧭 주간 모델 포트폴리오 4종</h2>
+<p style="margin:8px 0 16px 0;">이번 주 판정: <span class="portfolio-verdict verdict-hold">유지</span> — 다음 주 CPI 확인 전까지 비중 조정 보류</p>
+
+<!-- 4종 한눈에 비교 -->
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>비교 항목</th>
+      <th>🛡️ 안전형</th>
+      <th>⚖️ 중립형</th>
+      <th>🔥 공격형</th>
+      <th>💰 배당형</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>이번 주 주요 변화</td>
+      <td>변동 없음</td>
+      <td>변동 없음</td>
+      <td>변동 없음</td>
+      <td>변동 없음</td>
+    </tr>
+    <tr>
+      <td>다음 주 판단</td>
+      <td class="up">유지 — 안정적</td>
+      <td class="neutral">유지 — 관망</td>
+      <td class="warning">유지 — 주의</td>
+      <td class="up">유지 — 양호</td>
+    </tr>
+    <tr>
+      <td>기본 시나리오<br>기대 수익</td>
+      <td>5~7%</td>
+      <td>8~10%</td>
+      <td>12~18%</td>
+      <td>6~8%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="margin:12px 0;">
+  <strong>교차 분석:</strong> 유가 급등 + 달러 강세 + 지정학 불확실성이 동시에 진행 중이라, 4종 모두 "유지" 판정입니다. CPI 결과와 이란 협상 경과를 확인한 뒤 다음 주간 리포트에서 조정안을 제시합니다.
+</p>
+
+<!-- 탭 UI -->
+<div class="tab-container" id="portfolio-tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="tab-safe" onclick="openTab('portfolio-tabs','tab-safe')">🛡️ 안전형</button>
+    <button class="tab-btn" data-tab="tab-balanced" onclick="openTab('portfolio-tabs','tab-balanced')">⚖️ 중립형</button>
+    <button class="tab-btn" data-tab="tab-aggressive" onclick="openTab('portfolio-tabs','tab-aggressive')">🔥 공격형</button>
+    <button class="tab-btn" data-tab="tab-dividend" onclick="openTab('portfolio-tabs','tab-dividend')">💰 배당형</button>
+  </div>
+
+  <!-- 🛡️ 안전형 -->
+  <div class="tab-content active" id="tab-safe">
+    <p><strong>🛡️ 안전형</strong> — 원금 보존 최우선 | 참고: 달리오(올웨더), 브라운(영구 포트폴리오)<span class="portfolio-verdict verdict-hold">유지</span></p>
+    <div class="chart-container">
+      <div class="chart-title">자산 배분 비중</div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">국내주식</div><div class="bar-track"><div class="bar-fill c-stock-kr" style="width:30%;">30%</div></div></div>
+        <div class="bar-row"><div class="bar-label">해외주식</div><div class="bar-track"><div class="bar-fill c-stock-us" style="width:25%;">25%</div></div></div>
+        <div class="bar-row"><div class="bar-label">채권</div><div class="bar-track"><div class="bar-fill c-bond" style="width:20%;">20%</div></div></div>
+        <div class="bar-row"><div class="bar-label">배당주</div><div class="bar-track"><div class="bar-fill c-dividend" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">금</div><div class="bar-track"><div class="bar-fill c-gold" style="width:5%;">5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">달러</div><div class="bar-track"><div class="bar-fill c-dollar" style="width:5%;">5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">리츠</div><div class="bar-track"><div class="bar-fill c-reit" style="width:5%;">5%</div></div></div>
+      </div>
+    </div>
+    <details>
+      <summary>📊 시나리오별 기대수익률 — 자세히 보기</summary>
+      <div>
+        <table>
+          <tr><th>시나리오</th><th>기대수익률</th></tr>
+          <tr><td>🟢 낙관 (휴전 + 금리 인하)</td><td class="up">+8~10%</td></tr>
+          <tr><td>🟡 기본 (교착 지속)</td><td>+5~7%</td></tr>
+          <tr><td>🔴 비관 (전쟁 확대)</td><td class="down">-10~-15%</td></tr>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- ⚖️ 중립형 -->
+  <div class="tab-content" id="tab-balanced">
+    <p><strong>⚖️ 중립형</strong> — 균형 성장 추구 | 참고: 버핏(장기가치), 스웬슨(예일모델)<span class="portfolio-verdict verdict-hold">유지</span></p>
+    <div class="chart-container">
+      <div class="chart-title">자산 배분 비중</div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">미국성장주</div><div class="bar-track"><div class="bar-fill c-stock-us" style="width:25%;">25%</div></div></div>
+        <div class="bar-row"><div class="bar-label">국내주식</div><div class="bar-track"><div class="bar-fill c-stock-kr" style="width:25%;">25%</div></div></div>
+        <div class="bar-row"><div class="bar-label">채권</div><div class="bar-track"><div class="bar-fill c-bond" style="width:15%;">15%</div></div></div>
+        <div class="bar-row"><div class="bar-label">글로벌테마</div><div class="bar-track"><div class="bar-fill c-theme" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">배당주</div><div class="bar-track"><div class="bar-fill c-dividend" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">금+원자재</div><div class="bar-track"><div class="bar-fill c-gold" style="width:5%;">5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">크립토</div><div class="bar-track"><div class="bar-fill c-crypto" style="width:5%;">5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">리츠+대체</div><div class="bar-track"><div class="bar-fill c-reit" style="width:5%;">5%</div></div></div>
+      </div>
+    </div>
+    <details>
+      <summary>📊 시나리오별 기대수익률 — 자세히 보기</summary>
+      <div>
+        <table>
+          <tr><th>시나리오</th><th>기대수익률</th></tr>
+          <tr><td>🟢 낙관</td><td class="up">+12~15%</td></tr>
+          <tr><td>🟡 기본</td><td>+8~10%</td></tr>
+          <tr><td>🔴 비관</td><td class="down">-20~-25%</td></tr>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- 🔥 공격형 -->
+  <div class="tab-content" id="tab-aggressive">
+    <p><strong>🔥 공격형</strong> — 최대 수익 추구 | 참고: 캐시 우드(혁신), 버리(역발상)<span class="portfolio-verdict verdict-alert">경계</span></p>
+    <div class="chart-container">
+      <div class="chart-title">자산 배분 비중</div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">미국성장주</div><div class="bar-track"><div class="bar-fill c-stock-us" style="width:30%;">30%</div></div></div>
+        <div class="bar-row"><div class="bar-label">국내주식</div><div class="bar-track"><div class="bar-fill c-stock-kr" style="width:20%;">20%</div></div></div>
+        <div class="bar-row"><div class="bar-label">글로벌테마</div><div class="bar-track"><div class="bar-fill c-theme" style="width:15%;">15%</div></div></div>
+        <div class="bar-row"><div class="bar-label">크립토</div><div class="bar-track"><div class="bar-fill c-crypto" style="width:15%;">15%</div></div></div>
+        <div class="bar-row"><div class="bar-label">신흥국</div><div class="bar-track"><div class="bar-fill c-emerging" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">현금+단기채</div><div class="bar-track"><div class="bar-fill c-cash" style="width:5%;">5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">금</div><div class="bar-track"><div class="bar-fill c-gold" style="width:5%;">5%</div></div></div>
+      </div>
+    </div>
+    <div class="tip-box">
+      <strong>⚠️ 공격형 주의:</strong> 크립토 공포탐욕지수가 9(극단적 공포)입니다. BTC -24%(Q1 기준), SOL 6개월 연속 하락 중이라 단기 추가 하방 리스크가 있습니다. 현금 비중(5%)을 일시적으로 10%까지 높이는 것도 고려해 보세요.
+    </div>
+    <details>
+      <summary>📊 시나리오별 기대수익률 — 자세히 보기</summary>
+      <div>
+        <table>
+          <tr><th>시나리오</th><th>기대수익률</th></tr>
+          <tr><td>🟢 낙관</td><td class="up">+20~30%</td></tr>
+          <tr><td>🟡 기본</td><td>+12~18%</td></tr>
+          <tr><td>🔴 비관</td><td class="down">-35~-45%</td></tr>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- 💰 배당형 -->
+  <div class="tab-content" id="tab-dividend">
+    <p><strong>💰 배당형</strong> — 꾸준한 현금흐름 | 참고: 버핏(현금 창출 기업)<span class="portfolio-verdict verdict-hold">유지</span></p>
+    <div class="chart-container">
+      <div class="chart-title">자산 배분 비중</div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">배당성장ETF</div><div class="bar-track"><div class="bar-fill c-dividend" style="width:25%;">25%</div></div></div>
+        <div class="bar-row"><div class="bar-label">국내고배당</div><div class="bar-track"><div class="bar-fill c-stock-kr" style="width:20%;">20%</div></div></div>
+        <div class="bar-row"><div class="bar-label">리츠</div><div class="bar-track"><div class="bar-fill c-reit" style="width:15%;">15%</div></div></div>
+        <div class="bar-row"><div class="bar-label">미국고배당</div><div class="bar-track"><div class="bar-fill c-stock-us" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">국내배당ETF</div><div class="bar-track"><div class="bar-fill c-stock-kr" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">채권</div><div class="bar-track"><div class="bar-fill c-bond" style="width:10%;">10%</div></div></div>
+        <div class="bar-row"><div class="bar-label">커버드콜</div><div class="bar-track"><div class="bar-fill c-covered" style="width:5%;">5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">금+달러</div><div class="bar-track"><div class="bar-fill c-gold" style="width:5%;">5%</div></div></div>
+      </div>
+    </div>
+    <details>
+      <summary>📊 시나리오별 기대수익률 — 자세히 보기</summary>
+      <div>
+        <table>
+          <tr><th>시나리오</th><th>기대수익률</th></tr>
+          <tr><td>🟢 낙관</td><td class="up">+10~12%</td></tr>
+          <tr><td>🟡 기본</td><td>+6~8%</td></tr>
+          <tr><td>🔴 비관</td><td class="down">-12~-18%</td></tr>
+        </table>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- ═══ 디스클레이머 ═══ -->
+<div class="disclaimer">
+  <h4>⚠️ 주의사항</h4>
+  <ul style="padding-left:20px; margin-top:8px;">
+    <li>이 브리핑은 <strong>교육·참고 목적</strong>이며, 특정 종목의 매수·매도를 권유하지 않습니다.</li>
+    <li>기대수익률은 과거 데이터와 현재 시장 상황을 기반으로 한 <strong>추정치</strong>이며, 미래 수익을 보장하지 않습니다.</li>
+    <li>모든 투자 결정은 <strong>본인의 판단과 책임</strong> 하에 이루어져야 합니다.</li>
+    <li>거물 투자자의 매매 동향은 참고 정보이며, 동일한 결과를 보장하지 않습니다.</li>
+    <li>포트폴리오 비중은 교육용 <strong>모델</strong>이며, 개인 상황에 맞는 조정이 필요합니다.</li>
+  </ul>
+  <p style="margin-top:12px; font-size:0.85em;">
+    작성: 투자 인텔리전스 브리핑 시스템 v4.2 | 2026년 4월 5일<br>
+    데이터 기준: 4/3~4/4 종가 | 소스: Yahoo Finance, Investing.com, Trading Economics, CNBC, Bloomberg, Reuters, ICI, Fortune, Kiplinger 외
+  </p>
+</div>
+
+<script>
+function openTab(containerId, tabName) {
+  const c = document.getElementById(containerId);
+  c.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  c.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  c.querySelector('#' + tabName).classList.add('active');
+  c.querySelector('[data-tab="' + tabName + '"]').classList.add('active');
+}
+</script>
+
+</body>
+</html>
