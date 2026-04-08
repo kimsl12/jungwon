@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>저녁 브리핑 2026-04-08 | MODULE B</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --ink:#1a2234; --sub:#4b5568;
+    --accent:#1e5fd6; --warn:#d64545; --ok:#1f9d55; --mute:#8a94a6;
+    --border:#e3e7f0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+       background:var(--bg);color:var(--ink);font-size:18px;line-height:1.9;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:20px 16px 80px}
+  header.hero{background:linear-gradient(135deg,#1e5fd6,#3b82f6);color:#fff;border-radius:16px;padding:22px 20px;margin-bottom:18px;box-shadow:0 6px 18px rgba(30,95,214,.18)}
+  header.hero .tag{display:inline-block;background:rgba(255,255,255,.2);padding:4px 10px;border-radius:20px;font-size:14px;margin-bottom:8px}
+  header.hero h1{margin:6px 0 4px;font-size:26px;letter-spacing:-.5px}
+  header.hero .meta{font-size:15px;opacity:.9}
+  .oneliner{background:#fff;border-radius:16px;padding:22px;margin-bottom:16px;
+            border-left:8px solid var(--accent);box-shadow:0 2px 10px rgba(17,24,39,.06)}
+  .oneliner .label{font-size:14px;color:var(--accent);font-weight:700;letter-spacing:1px}
+  .oneliner .title{font-size:22px;font-weight:800;margin:6px 0 4px;line-height:1.5}
+  .oneliner .sub{font-size:16px;color:var(--sub)}
+  .card{background:#fff;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 10px rgba(17,24,39,.06)}
+  .card h2{margin:0 0 12px;font-size:20px;border-bottom:2px solid var(--border);padding-bottom:8px}
+  .impact{display:grid;grid-template-columns:1fr;gap:10px}
+  .impact .row{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--border);border-radius:12px;background:#fbfcff}
+  .impact .row .ico{font-size:22px;width:32px;flex-shrink:0;text-align:center}
+  .impact .row .txt strong{display:block;margin-bottom:2px}
+  details.accent{border-left:6px solid var(--accent);background:#f3f7ff;border-radius:10px;padding:10px 14px;margin:10px 0}
+  details.accent summary{cursor:pointer;font-weight:700;font-size:17px;padding:6px 0;list-style:none}
+  details.accent summary::-webkit-details-marker{display:none}
+  details.accent summary::before{content:"▶ ";color:var(--accent);font-size:14px}
+  details.accent[open] summary::before{content:"▼ "}
+  .idx{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+  @media(max-width:520px){.idx{grid-template-columns:1fr}}
+  .idx .box{border:1px solid var(--border);border-radius:12px;padding:12px;background:#fff}
+  .idx .nm{font-size:14px;color:var(--sub)}
+  .idx .val{font-size:20px;font-weight:800;margin-top:2px}
+  .idx .chg{font-size:15px;margin-top:2px}
+  .up{color:var(--ok)} .dn{color:var(--warn)} .fl{color:var(--mute)}
+  /* Portfolio Tabs */
+  .pf-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .pf-tabs button{flex:1;min-width:120px;min-height:48px;border:2px solid var(--border);background:#fff;
+                  border-radius:10px;font-size:15px;font-weight:700;color:var(--sub);cursor:pointer}
+  .pf-tabs button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .pf-panel{display:none}
+  .pf-panel.active{display:block}
+  .badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:13px;font-weight:700;margin-left:6px}
+  .badge.hold{background:#e6f4ea;color:var(--ok)}
+  .badge.watch{background:#fff4e5;color:#b36b00}
+  .bar-row{margin:10px 0}
+  .bar-label{display:flex;justify-content:space-between;font-size:15px;margin-bottom:4px}
+  .bar-track{height:22px;background:#eef1f7;border-radius:11px;overflow:hidden}
+  .bar-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#1e5fd6);border-radius:11px}
+  .bar-fill.safe{background:linear-gradient(90deg,#34d399,#059669)}
+  .bar-fill.gold{background:linear-gradient(90deg,#fbbf24,#d97706)}
+  .bar-fill.cash{background:linear-gradient(90deg,#94a3b8,#475569)}
+  .bar-fill.alt{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+  .src{font-size:13px;color:var(--mute)}
+  .notice{background:#fff6f6;border:1px solid #f3caca;border-radius:12px;padding:14px;color:#7a1a1a;font-size:14px;margin-top:18px;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="tag">MODULE B · 이브닝 브리핑</span>
+  <h1>2026년 4월 8일 (수) 저녁 브리핑</h1>
+  <div class="meta">국제 이슈 + 아시아 마감 + 미국장 개장 방향</div>
+</header>
+
+<!-- 1. 오늘의 한 줄 -->
+<section class="oneliner">
+  <div class="label">오늘의 한 줄</div>
+  <div class="title">전쟁이 멈췄습니다. 시장은 안도의 숨을 쉬는 중입니다.</div>
+  <div class="sub">미국-이란이 <strong>2주 휴전</strong>에 합의하면서 유가는 하루 만에 <strong>13~17% 급락</strong>, 미국 선물은 <strong>+2%</strong> 상승 출발. 방향성: <strong>단기 위험선호 ↑</strong> / 확신도: <strong>중상</strong></div>
+</section>
+
+<!-- 2. 나에게 미치는 영향 -->
+<section class="card">
+  <h2>나에게 미치는 영향 — 그래서 뭘 할까?</h2>
+  <div class="impact">
+    <div class="row"><div class="ico">🛢️</div><div class="txt"><strong>기름값·물가 걱정 ↓</strong>유가가 빠지면 한국 수입물가·기름값 압력이 완화됩니다. 당장 쫓겨서 뭘 팔 필요는 없습니다.</div></div>
+    <div class="row"><div class="ico">📈</div><div class="txt"><strong>주식 — 추격 매수는 신중</strong>오늘 밤 미국장은 갭업 출발이 유력합니다. 이미 많이 오른 가격을 뒤쫓기보다 <b>보유 종목 유지</b>가 기본입니다.</div></div>
+    <div class="row"><div class="ico">🥇</div><div class="txt"><strong>금·달러 — 조금 식는다</strong>위험이 줄면 안전자산 수요도 줄어듭니다. 금·달러가 단기적으로 눌릴 수 있지만 <b>비중 유지</b>가 원칙입니다. 휴전은 2주짜리입니다.</div></div>
+    <div class="row"><div class="ico">⚠️</div><div class="txt"><strong>휴전은 한시적 — 경계 유지</strong>"2주 휴전" 조건부입니다. 재협상 결렬 가능성이 살아 있어 <b>포지션 신규 확대는 금물</b>.</div></div>
+  </div>
+</section>
+
+<!-- 3. 상세 분석 (접이식) -->
+<details class="accent">
+  <summary>📊 아시아·한국 시장 마감 (클릭)</summary>
+  <div class="idx">
+    <div class="box"><div class="nm">KOSPI</div><div class="val">5,494.78</div><div class="chg up">▲ +44.45 (+0.82%)</div></div>
+    <div class="box"><div class="nm">KOSDAQ</div><div class="val">1,036.73</div><div class="chg dn">▼ -10.64 (-1.02%)</div></div>
+  </div>
+  <p style="margin-top:12px">KOSPI는 장 초반 +1.87%까지 급등했다가 중동 리스크로 한때 마이너스 전환, 장 후반 휴전 기대감에 재상승. 대형주(삼성전자 +1.76%, SK하이닉스 +3.39%) 중심 강세인 반면 중소형주(KOSDAQ)는 약세. <span class="src">[디지털투데이][Yahoo Finance]</span></p>
+</details>
+
+<details class="accent">
+  <summary>🇺🇸 미국장 방향성 & 주요 지수 (전일 마감 기준)</summary>
+  <div class="idx">
+    <div class="box"><div class="nm">S&amp;P 500</div><div class="val">6,616.85</div><div class="chg up">▲ +0.08%</div></div>
+    <div class="box"><div class="nm">NASDAQ</div><div class="val">22,017.85</div><div class="chg up">▲ +0.10%</div></div>
+    <div class="box"><div class="nm">DOW</div><div class="val">46,584.46</div><div class="chg dn">▼ -0.18%</div></div>
+    <div class="box"><div class="nm">VIX (공포지수)</div><div class="val">23.87</div><div class="chg fl">4/6 기준 · 휴전 후 하락 전망</div></div>
+  </div>
+  <p style="margin-top:12px"><b>오늘 밤 개장 방향:</b> S&amp;P 500 선물 약 +2% 상승 출발 시사. 뉴스 헤드라인이 주도하는 <b>헤드라인 드리븐 랠리</b>로, 장중 변동성이 클 수 있음. <span class="src">[CNBC][IG International]</span></p>
+</details>
+
+<details class="accent">
+  <summary>💱 환율·원자재 — 안전자산이 식고 있다</summary>
+  <div class="idx">
+    <div class="box"><div class="nm">달러/원</div><div class="val">1,515원대</div><div class="chg fl">YTD +2.28%</div></div>
+    <div class="box"><div class="nm">국제유가 (Brent)</div><div class="val">$100 하회</div><div class="chg dn">▼ 하루 -13~17%</div></div>
+  </div>
+  <p style="margin-top:12px">유가 급락은 휴전 + 호르무즈 개방 합의의 <b>직접 효과</b>. 달러/원은 추가 정보 부족으로 <b>일일 종가 미확인(모름)</b> — 1,515원 내외 가정. 금 현물가는 4/8 당일 종가 데이터 확보 실패. <span class="src">[CNBC][Euronews][Investing.com]</span></p>
+</details>
+
+<details class="accent">
+  <summary>🌏 국제 이슈 — 미-이란 2주 휴전 전말</summary>
+  <p>트럼프 대통령은 호르무즈 해협 완전 개방을 조건으로 이란에 대한 공습을 <b>2주간 중단</b>한다고 발표. 이란 최고국가안보회의도 휴전을 수용하고 <b>금요일부터 이슬라마바드에서 협상</b> 개시 예정. 이란 관리는 호르무즈 안전 통항을 보장한다고 확인. <span class="src">[CNBC 2026-04-08][Euronews][CBS News][Wikipedia: 2026 Strait of Hormuz crisis]</span></p>
+  <p><b>리스크 포인트:</b> (1) 2주 기한 종료 시 재협상 결렬 가능성 (2) 이란 내부 강경파 반발 (3) 원유 재고 재조정 과정의 변동성.</p>
+</details>
+
+<!-- 4. 모델 포트폴리오 (탭 UI) -->
+<section class="card">
+  <h2>모델 포트폴리오 (4종)</h2>
+  <div class="pf-tabs" role="tablist">
+    <button class="active" data-tab="safe">안전형</button>
+    <button data-tab="neutral">중립형</button>
+    <button data-tab="aggr">공격형</button>
+    <button data-tab="div">배당형</button>
+  </div>
+
+  <!-- 안전형 -->
+  <div class="pf-panel active" id="safe">
+    <div><span class="badge hold">유지</span> <b>전쟁 리스크 완화에도 포지션 유지</b></div>
+    <div class="bar-row"><div class="bar-label"><span>채권 (국채·우량회사채)</span><span>50%</span></div><div class="bar-track"><div class="bar-fill safe" style="width:50%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>현금·MMF</span><span>20%</span></div><div class="bar-track"><div class="bar-fill cash" style="width:20%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>금 (KRX금·ETF)</span><span>15%</span></div><div class="bar-track"><div class="bar-fill gold" style="width:15%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>주식 (대형 우량)</span><span>15%</span></div><div class="bar-track"><div class="bar-fill" style="width:15%"></div></div></div>
+  </div>
+
+  <!-- 중립형 -->
+  <div class="pf-panel" id="neutral">
+    <div><span class="badge hold">유지</span> <b>밸런스 유지, 신규 매수는 보류</b></div>
+    <div class="bar-row"><div class="bar-label"><span>주식 (국내·미국 대형)</span><span>45%</span></div><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>채권</span><span>30%</span></div><div class="bar-track"><div class="bar-fill safe" style="width:30%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>금</span><span>10%</span></div><div class="bar-track"><div class="bar-fill gold" style="width:10%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>현금</span><span>10%</span></div><div class="bar-track"><div class="bar-fill cash" style="width:10%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>대체 (리츠·크립토)</span><span>5%</span></div><div class="bar-track"><div class="bar-fill alt" style="width:5%"></div></div></div>
+  </div>
+
+  <!-- 공격형 -->
+  <div class="pf-panel" id="aggr">
+    <div><span class="badge watch">경계</span> <b>갭업 추격 금지 — 단기 변동성 확대 구간</b></div>
+    <div class="bar-row"><div class="bar-label"><span>성장주·테크</span><span>55%</span></div><div class="bar-track"><div class="bar-fill" style="width:55%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>국내·신흥 주식</span><span>20%</span></div><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>대체 (크립토·원자재)</span><span>15%</span></div><div class="bar-track"><div class="bar-fill alt" style="width:15%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>현금</span><span>10%</span></div><div class="bar-track"><div class="bar-fill cash" style="width:10%"></div></div></div>
+  </div>
+
+  <!-- 배당형 -->
+  <div class="pf-panel" id="div">
+    <div><span class="badge hold">유지</span> <b>현금흐름 중심, 금리 피크아웃 수혜 기대</b></div>
+    <div class="bar-row"><div class="bar-label"><span>고배당주·리츠</span><span>50%</span></div><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>우량 회사채</span><span>25%</span></div><div class="bar-track"><div class="bar-fill safe" style="width:25%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>배당 ETF (미국)</span><span>15%</span></div><div class="bar-track"><div class="bar-fill" style="width:15%"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>현금</span><span>10%</span></div><div class="bar-track"><div class="bar-fill cash" style="width:10%"></div></div></div>
+  </div>
+</section>
+
+<!-- 신뢰도 & 데이터 공백 고지 -->
+<section class="card">
+  <h2>데이터 신뢰도 (Confidence)</h2>
+  <p style="margin:6px 0"><b>상</b> — 미국 3대 지수 종가, KOSPI/KOSDAQ 종가, 미-이란 휴전 팩트, 유가 급락 폭</p>
+  <p style="margin:6px 0"><b>중</b> — VIX(4/6 기준), 달러/원 (일일 확정값 부족)</p>
+  <p style="margin:6px 0"><b>모름</b> — 4/8 당일 금 현물 종가, 당일 달러/원 종가 확정치 → 추측하지 않음</p>
+</section>
+
+<div class="notice">
+  ⚠️ <b>주의사항</b> — 본 브리핑은 공개 정보에 기반한 시장 해설로, 개별 투자자를 위한 맞춤 조언이 아닙니다. 투자 판단과 결과의 책임은 전적으로 투자자 본인에게 있습니다. 수치는 각 원 소스 기준이며, 장중 변동될 수 있습니다.
+</div>
+
+</div>
+<script>
+  document.querySelectorAll('.pf-tabs button').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.pf-tabs button').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.pf-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
