@@ -1,0 +1,177 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모닝 브리핑 — 2026년 4월 10일 (목)</title>
+</head>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    background: #fafaf5;
+    color: #1a202c;
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    padding: 16px;
+    max-width: 100%;
+    margin: 0 auto;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  @media (min-width: 768px) {
+    body { max-width: 720px; padding: 24px; }
+  }
+  .one-liner {
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 20px 24px;
+    border-radius: 12px;
+    font-size: 1.15em;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .impact-card {
+    background: #fff;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0 24px 0;
+  }
+  .impact-card h3 { color: #2563eb; margin-top: 0; border-bottom: none; font-size: 1.1em; }
+  .impact-item { padding: 12px 0; border-bottom: 1px solid #e8e4dc; font-size: 1em; line-height: 1.8; }
+  .impact-item:last-child { border-bottom: none; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th { background: #f0ede6; padding: 12px 14px; text-align: left; font-weight: 700; color: #1e293b; border-bottom: 2px solid #d4cfc4; position: sticky; top: 0; white-space: nowrap; font-size: 0.95em; }
+  td { padding: 12px 14px; border-bottom: 1px solid #e8e4dc; word-break: keep-all; font-size: 0.95em; }
+  tr:hover { background: #f5f3ed; }
+  @media (max-width: 600px) {
+    .card-table thead { display: none; }
+    .card-table tr { display: block; background: #fff; border: 1px solid #e8e4dc; border-radius: 10px; padding: 14px; margin: 10px 0; }
+    .card-table td { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0ede6; }
+    .card-table td::before { content: attr(data-label); font-weight: 700; color: #4a5568; margin-right: 12px; flex-shrink: 0; }
+    .card-table td:last-child { border-bottom: none; }
+  }
+  .up      { color: #15803d; font-weight: 700; }
+  .down    { color: #b91c1c; font-weight: 700; }
+  .neutral { color: #6b7280; }
+  .highlight { color: #1d4ed8; font-weight: 700; }
+  .warning { color: #b45309; font-weight: 700; }
+  .bg-up      { background: rgba(21,128,61,0.1); }
+  .bg-down    { background: rgba(185,28,28,0.1); }
+  .bg-warning { background: rgba(180,83,9,0.1); }
+  .bg-highlight { background: rgba(29,78,216,0.08); }
+  h2, h3 { color: #0f172a; border-bottom: 2px solid #e2dfd7; padding-bottom: 8px; }
+  h2 { font-size: 1.3em; margin-top: 36px; }
+  h3 { font-size: 1.1em; margin-top: 24px; }
+  code { background: #f0ede6; padding: 4px 10px; border-radius: 6px; font-size: 0.9em; color: #b45309; white-space: nowrap; }
+  details { border: 1px solid #e2dfd7; border-radius: 10px; padding: 0; margin: 10px 0; background: #fff; }
+  summary { cursor: pointer; font-weight: 700; color: #1e293b; padding: 16px 20px; font-size: 1em; list-style: none; display: flex; align-items: center; gap: 8px; min-height: 48px; }
+  summary::before { content: '▶'; font-size: 0.7em; transition: transform 0.2s; flex-shrink: 0; color: #6b7280; }
+  details[open] summary::before { transform: rotate(90deg); }
+  summary::-webkit-details-marker { display: none; }
+  details > div, details > table { padding: 0 20px 16px 20px; }
+  details.accent { border-left: 4px solid #2563eb; background: #f8faff; }
+  details.accent summary { color: #1d4ed8; }
+  details.accent summary::before { color: #2563eb; }
+  .tip-box { background: #fef9ec; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 12px 0; font-size: 0.95em; color: #78350f; line-height: 1.8; }
+  .tab-container { margin: 16px 0; }
+  .tab-buttons { display: flex; gap: 4px; border-bottom: 2px solid #e2dfd7; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tab-btn { padding: 12px 18px; border: 1px solid #e2dfd7; border-bottom: none; border-radius: 10px 10px 0 0; background: #f5f3ed; cursor: pointer; font-weight: 700; color: #4a5568; font-size: 0.95em; white-space: nowrap; min-height: 48px; }
+  .tab-btn.active { background: #fafaf5; color: #1d4ed8; border-bottom: 2px solid #fafaf5; margin-bottom: -2px; }
+  .tab-content { display: none; padding: 16px 0; }
+  .tab-content.active { display: block; }
+  .portfolio-verdict { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 0.85em; font-weight: 700; margin-left: 8px; }
+  .verdict-hold { background: #f0ede6; color: #6b7280; }
+  .verdict-adjust { background: #dbeafe; color: #1d4ed8; }
+  .verdict-alert { background: #fef3c7; color: #b45309; }
+  .chart-container { margin: 20px 0; padding: 16px; background: #fff; border: 1px solid #e8e4dc; border-radius: 12px; }
+  .chart-title { font-size: 1em; font-weight: 700; color: #1e293b; margin-bottom: 12px; }
+  .bar-chart { width: 100%; }
+  .bar-row { display: flex; align-items: center; margin: 8px 0; }
+  .bar-label { width: 100px; font-size: 0.9em; color: #1e293b; text-align: right; padding-right: 10px; white-space: nowrap; flex-shrink: 0; font-weight: 600; }
+  .bar-track { flex: 1; background: #f0ede6; border-radius: 6px; height: 28px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 8px; font-size: 0.8em; font-weight: 700; color: white; white-space: nowrap; }
+  .vbar-chart { display: flex; align-items: flex-end; justify-content: space-around; height: 200px; border-bottom: 2px solid #e2dfd7; padding: 0 10px; margin-bottom: 8px; }
+  .vbar-item { display: flex; flex-direction: column; align-items: center; flex: 1; max-width: 80px; }
+  .vbar-bar { width: 40px; border-radius: 6px 6px 0 0; }
+  .vbar-val { font-size: 0.85em; font-weight: 700; margin-bottom: 4px; }
+  .vbar-label { font-size: 0.8em; color: #1e293b; margin-top: 6px; text-align: center; font-weight: 600; }
+  .signal-bar-track { width: 100%; background: #e8e4dc; border-radius: 6px; height: 10px; margin: 4px 0; }
+  .c-stock-us  { background: #3b82f6; }
+  .c-stock-kr  { background: #6366f1; }
+  .c-bond      { background: #16a34a; }
+  .c-dividend  { background: #f97316; }
+  .c-gold      { background: #eab308; }
+  .c-dollar    { background: #06b6d4; }
+  .c-reit      { background: #8b5cf6; }
+  .c-crypto    { background: #ec4899; }
+  .c-theme     { background: #14b8a6; }
+  .c-emerging  { background: #f43f5e; }
+  .c-cash      { background: #9ca3af; }
+  .c-commodity { background: #a16207; }
+  .c-covered   { background: #7c3aed; }
+  .disclaimer { border-top: 2px solid #d0d5dd; padding-top: 20px; margin-top: 32px; color: #4a5568; font-size: 0.9em; line-height: 1.8; }
+</style>
+<body>
+
+<h2>🌅 모닝 브리핑 — 2026년 4월 10일 (금)</h2>
+
+<!-- A-0: 오늘의 한 줄 -->
+<div class="one-liner">
+<!-- PLACEHOLDER A-0 -->
+</div>
+
+<!-- A-1: 나에게 미치는 영향 -->
+<div class="impact-card">
+<!-- PLACEHOLDER A-1 -->
+</div>
+
+<!-- A-2-1: 시장 수치 요약 -->
+<details class="accent"><summary>📈 시장 수치 요약 — 자세히 보기</summary>
+<div><!-- PLACEHOLDER A-2-1 --></div>
+</details>
+
+<!-- A-2-2: 어젯밤 핵심 뉴스 -->
+<details class="accent"><summary>📰 어젯밤 주요 뉴스 3건 — 자세히 보기</summary>
+<div><!-- PLACEHOLDER A-2-2 --></div>
+</details>
+
+<!-- A-2-3: 한국·아시아 전망 -->
+<details class="accent"><summary>🌏 오늘 한국·아시아 시장 전망 — 자세히 보기</summary>
+<div><!-- PLACEHOLDER A-2-3 --></div>
+</details>
+
+<!-- A-2-4: 거물 투자자 동향 -->
+<details class="accent"><summary>🧑‍💼 거물 투자자 동향 — 자세히 보기</summary>
+<div><!-- PLACEHOLDER A-2-4 --></div>
+</details>
+
+<!-- A-2-5: 글로벌 매크로 시사점 -->
+<details class="accent"><summary>🌐 글로벌 매크로 시사점 — 자세히 보기</summary>
+<div><!-- PLACEHOLDER A-2-5 --></div>
+</details>
+
+<!-- A-3: 모델 포트폴리오 -->
+<h2>📊 모델 포트폴리오</h2>
+<div class="tab-container" id="portfolio-tabs">
+<!-- PLACEHOLDER A-3 -->
+</div>
+
+<!-- 주의사항 -->
+<div class="disclaimer">
+<!-- PLACEHOLDER DISCLAIMER -->
+</div>
+
+<script>
+function openTab(containerId, tabName) {
+  const c = document.getElementById(containerId);
+  c.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  c.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  c.querySelector('#' + tabName).classList.add('active');
+  c.querySelector('[data-tab="' + tabName + '"]').classList.add('active');
+}
+</script>
+</body>
+</html>
